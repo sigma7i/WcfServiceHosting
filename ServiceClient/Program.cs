@@ -14,6 +14,10 @@ namespace ServiceClient
 
             var result = serv.AddAsync(3, 4).Result;
             Console.WriteLine(result);
+
+            var servTopShelf = new ServiceTopshelfReference.CalculatorClient();
+            var resultTopShelf = servTopShelf.Multiply(2.5, 5);
+            Console.WriteLine($"TopSelf {resultTopShelf}");
         }
     }
 }
