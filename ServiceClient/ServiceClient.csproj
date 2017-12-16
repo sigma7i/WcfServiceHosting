@@ -58,6 +58,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\WcfWithoutConfig\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -77,6 +82,13 @@
     <None Include="Service References\ServiceTopshelfReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\WcfWithoutConfig\service.wsdl" />
+    <None Include="Service References\WcfWithoutConfig\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WcfWithoutConfig\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -84,6 +96,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference\" />
     <WCFMetadataStorage Include="Service References\ServiceTopshelfReference\" />
+    <WCFMetadataStorage Include="Service References\WcfWithoutConfig\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceReference\configuration91.svcinfo" />
@@ -108,6 +121,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceTopshelfReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WcfWithoutConfig\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WcfWithoutConfig\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WcfWithoutConfig\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

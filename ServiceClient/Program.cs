@@ -18,6 +18,11 @@ namespace ServiceClient
             var servTopShelf = new ServiceTopshelfReference.CalculatorClient();
             var resultTopShelf = servTopShelf.Multiply(2.5, 5);
             Console.WriteLine($"TopSelf {resultTopShelf}");
+
+            var servNoConfig = new WcfWithoutConfig.MyServiceClient();
+            var stringResult = servNoConfig.ConvertString(Environment.SystemDirectory);
+
+            Console.WriteLine($"To Upper {stringResult}");
         }
     }
 }
