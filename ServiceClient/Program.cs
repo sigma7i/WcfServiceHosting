@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.ServiceModel.Channels;
-using System.Text;
 using System.Threading.Tasks;
+using ServiceClient.ServiceTopshelfReference;
 using ServiceClient.WcfWithoutConfig;
 
 namespace ServiceClient
@@ -15,8 +12,38 @@ namespace ServiceClient
         {
             TestWpfServices();
             ParallelWorkingTest();
+            ThrowServiceExeption();
 
             Console.ReadKey();
+        }
+
+        private static void ThrowServiceExeption()
+        {
+            var topShelfService = new CalculatorClient();
+
+            try
+            {
+                // topShelfService can not be reuse
+                topShelfService.DoAnyExeption();
+            }
+            catch (Exception e)
+            {
+            }
+
+            var secondClient = new CalculatorClient();
+            var result = secondClient.Divide(4, 2);
+
+            try
+            {
+                // Sevice crush
+                var thirdClient = new CalculatorClient();
+                topShelfService.DoStackOverflow();
+            }
+            catch (Exception ex)
+            {
+                
+                throw;
+            }
         }
 
         private static void TestWpfServices()
@@ -26,7 +53,7 @@ namespace ServiceClient
             var result = serv.AddAsync(3, 4).Result;
             Console.WriteLine(result);
 
-            var servTopShelf = new ServiceTopshelfReference.CalculatorClient();
+            var servTopShelf = new CalculatorClient();
             var resultTopShelf = servTopShelf.Multiply(2.5, 5);
             Console.WriteLine($"TopSelf {resultTopShelf}");
 

@@ -14,5 +14,11 @@ namespace ServiceTopshelf
         double Multiply(double n1, double n2);
         [OperationContract]
         double Divide(double n1, double n2);
+
+        [OperationContract]
+        void DoStackOverflow();
+
+        [OperationContract]
+        void DoAnyExeption();
     }
 }

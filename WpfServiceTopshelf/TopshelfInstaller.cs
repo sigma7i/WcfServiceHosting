@@ -1,4 +1,6 @@
-﻿using System.ServiceModel;
+﻿using System;
+using System.IO;
+using System.ServiceModel;
 using Topshelf;
 
 namespace ServiceTopshelf
@@ -11,13 +13,26 @@ namespace ServiceTopshelf
             {
                 x.Service<TopshelfService>();
 
+                x.StartAutomatically();
                 x.RunAsLocalSystem();
                 x.SetDescription("WсfTopshelf Service Example");
                 x.SetDisplayName("WсfTopshelfService Example");
                 x.SetServiceName("WсfTopshelfService");
+                x.EnableServiceRecovery(rc => { rc.RestartService(0);
+                                                rc.RestartService(0);
+                                                rc.RestartService(0);
+                });
+                x.OnException(ExeptionHandling);
             });
         }
+
+        private static void ExeptionHandling(Exception ex)
+        {
+            // do something
+        }
     }
+
+
 
     class TopshelfService : ServiceControl
     {

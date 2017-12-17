@@ -30,6 +30,18 @@
   <wsdl:message name="ICalculator_Divide_OutputMessage">
     <wsdl:part name="parameters" element="tns:DivideResponse" />
   </wsdl:message>
+  <wsdl:message name="ICalculator_DoStackOverflow_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoStackOverflow" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_DoStackOverflow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoStackOverflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_DoAnyExeption_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoAnyExeption" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_DoAnyExeption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoAnyExeptionResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICalculator">
     <wsdl:operation name="Add">
       <wsdl:input wsaw:Action="http://ServiceTopshelf/ICalculator/Add" message="tns:ICalculator_Add_InputMessage" />
@@ -46,6 +58,14 @@
     <wsdl:operation name="Divide">
       <wsdl:input wsaw:Action="http://ServiceTopshelf/ICalculator/Divide" message="tns:ICalculator_Divide_InputMessage" />
       <wsdl:output wsaw:Action="http://ServiceTopshelf/ICalculator/DivideResponse" message="tns:ICalculator_Divide_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoStackOverflow">
+      <wsdl:input wsaw:Action="http://ServiceTopshelf/ICalculator/DoStackOverflow" message="tns:ICalculator_DoStackOverflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://ServiceTopshelf/ICalculator/DoStackOverflowResponse" message="tns:ICalculator_DoStackOverflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoAnyExeption">
+      <wsdl:input wsaw:Action="http://ServiceTopshelf/ICalculator/DoAnyExeption" message="tns:ICalculator_DoAnyExeption_InputMessage" />
+      <wsdl:output wsaw:Action="http://ServiceTopshelf/ICalculator/DoAnyExeptionResponse" message="tns:ICalculator_DoAnyExeption_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

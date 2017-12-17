@@ -38,6 +38,18 @@ namespace ServiceClient.ServiceTopshelfReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ServiceTopshelf/ICalculator/Divide", ReplyAction="http://ServiceTopshelf/ICalculator/DivideResponse")]
         System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ServiceTopshelf/ICalculator/DoStackOverflow", ReplyAction="http://ServiceTopshelf/ICalculator/DoStackOverflowResponse")]
+        void DoStackOverflow();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ServiceTopshelf/ICalculator/DoStackOverflow", ReplyAction="http://ServiceTopshelf/ICalculator/DoStackOverflowResponse")]
+        System.Threading.Tasks.Task DoStackOverflowAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ServiceTopshelf/ICalculator/DoAnyExeption", ReplyAction="http://ServiceTopshelf/ICalculator/DoAnyExeptionResponse")]
+        void DoAnyExeption();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ServiceTopshelf/ICalculator/DoAnyExeption", ReplyAction="http://ServiceTopshelf/ICalculator/DoAnyExeptionResponse")]
+        System.Threading.Tasks.Task DoAnyExeptionAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +109,22 @@ namespace ServiceClient.ServiceTopshelfReference {
         
         public System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2) {
             return base.Channel.DivideAsync(n1, n2);
+        }
+        
+        public void DoStackOverflow() {
+            base.Channel.DoStackOverflow();
+        }
+        
+        public System.Threading.Tasks.Task DoStackOverflowAsync() {
+            return base.Channel.DoStackOverflowAsync();
+        }
+        
+        public void DoAnyExeption() {
+            base.Channel.DoAnyExeption();
+        }
+        
+        public System.Threading.Tasks.Task DoAnyExeptionAsync() {
+            return base.Channel.DoAnyExeptionAsync();
         }
     }
 }
