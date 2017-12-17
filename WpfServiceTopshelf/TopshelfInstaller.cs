@@ -12,9 +12,9 @@ namespace ServiceTopshelf
                 x.Service<TopshelfService>();
 
                 x.RunAsLocalSystem();
-                x.SetDescription("Topshelf Service Example");
-                x.SetDisplayName("TopshelfService Example");
-                x.SetServiceName("TopshelfService");
+                x.SetDescription("WсfTopshelf Service Example");
+                x.SetDisplayName("WсfTopshelfService Example");
+                x.SetServiceName("WсfTopshelfService");
             });
         }
     }
