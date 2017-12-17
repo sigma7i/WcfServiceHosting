@@ -14,4 +14,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="DoLongWork10Second">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="d" type="xs:int" />
+        <xs:element minOccurs="0" name="e" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoLongWork10SecondResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoLongWork10SecondResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -20,6 +20,12 @@ namespace ServiceClient.WcfWithoutConfig {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/ConvertString", ReplyAction="http://tempuri.org/IMyService/ConvertStringResponse")]
         System.Threading.Tasks.Task<string> ConvertStringAsync(string str);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/DoLongWork10Second", ReplyAction="http://tempuri.org/IMyService/DoLongWork10SecondResponse")]
+        int DoLongWork10Second(int d, int e);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/DoLongWork10Second", ReplyAction="http://tempuri.org/IMyService/DoLongWork10SecondResponse")]
+        System.Threading.Tasks.Task<int> DoLongWork10SecondAsync(int d, int e);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +61,14 @@ namespace ServiceClient.WcfWithoutConfig {
         
         public System.Threading.Tasks.Task<string> ConvertStringAsync(string str) {
             return base.Channel.ConvertStringAsync(str);
+        }
+        
+        public int DoLongWork10Second(int d, int e) {
+            return base.Channel.DoLongWork10Second(d, e);
+        }
+        
+        public System.Threading.Tasks.Task<int> DoLongWork10SecondAsync(int d, int e) {
+            return base.Channel.DoLongWork10SecondAsync(d, e);
         }
     }
 }

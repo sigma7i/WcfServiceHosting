@@ -13,5 +13,8 @@ namespace WcfWithoutConfig
     {
         [OperationContract]
         string ConvertString(string str);
+
+        [OperationContract]
+        int DoLongWork10Second(int d, int e);
     }
 }

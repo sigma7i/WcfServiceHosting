@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 
 namespace WcfWithoutConfig
 {
@@ -13,6 +14,12 @@ namespace WcfWithoutConfig
         public string ConvertString(string str)
         {
             return str.ToUpper();
+        }
+
+        public int DoLongWork10Second(int d, int e)
+        {
+            Thread.Sleep(10000);
+            return d + e;
         }
     }
 }

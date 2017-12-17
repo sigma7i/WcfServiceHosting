@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;
+using System.Threading;
 using Topshelf;
 
 namespace WcfWithoutConfig
