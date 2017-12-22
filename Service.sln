@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClient", "ServiceClient\ServiceClient.csproj", "{7D0B07DF-51C5-43F2-AA04-339D6B06D08A}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "WcfService\WcfService.csproj", "{7926FF97-82BD-4FAE-B94E-695F7CEFF765}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceTopshelf", "WpfServiceTopshelf\WcfServiceTopshelf.csproj", "{4382CCA8-6572-4BFF-8EE2-7670262DF3DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfNamedPipes", "WcfNamedPipes\WcfNamedPipes.csproj", "{891B5670-DB91-4A88-8253-6FD511949C1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4382CCA8-6572-4BFF-8EE2-7670262DF3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4382CCA8-6572-4BFF-8EE2-7670262DF3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4382CCA8-6572-4BFF-8EE2-7670262DF3DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891B5670-DB91-4A88-8253-6FD511949C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891B5670-DB91-4A88-8253-6FD511949C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891B5670-DB91-4A88-8253-6FD511949C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891B5670-DB91-4A88-8253-6FD511949C1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
